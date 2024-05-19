@@ -2,7 +2,9 @@
 
 import { useState } from 'react';
 import styles from './page.module.css'; // Include your CSS file for styling
-import "/global.css";
+import "../app/globals.css";
+import reactElementToJSXString from "react-element-to-jsx-string";
+// import { ButtonsCard } from "../ui/tailwindcss-buttons";
 
 export default function Home() {
   const [step, setStep] = useState(1);
@@ -62,15 +64,15 @@ export default function Home() {
   return (
     <div className={styles.mainContent}>
       <header className={styles.header}>
-        <h1>sleePy</h1>
+        <h1 className="text-3xl font-bold underline">sleePy</h1>     
       </header>
       <main>
         {step === 1 && (
           <div>
-            <h2>sleePy?</h2>
+            <h2 className="text-3xl font-bold underline">sleePy?</h2>
             <form onSubmit={handleSubmitInput}>
               <p>Make sure your <strong>Fitbit</strong> device is on</p>
-              <button type="submit" onClick={fetchHeartRateData}>Get started</button>
+              <button type="submit" onClick={fetchHeartRateData}  className="shadow-[0_4px_14px_0_rgb(0,118,255,39%)] hover:shadow-[0_6px_20px_rgba(0,118,255,23%)] hover:bg-[rgba(0,118,255,0.9)] px-8 py-2 bg-[#0070f3] rounded-md text-white font-light transition duration-200 ease-linear">Get started</button>
             </form>
             {heartRate && (
               <div className="heart-rate-display">
