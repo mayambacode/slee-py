@@ -56,7 +56,7 @@ export default function Home() {
     }
   };
 
-  const handleSubmitInput = (e) => {
+  const handleSubmitInput = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStep(step + 1);
   };
