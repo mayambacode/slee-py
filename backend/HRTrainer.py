@@ -80,7 +80,7 @@ start_hr_entry.pack()
 
 
 
-end_hr_lbl = tk.Label(root, text="Please enter starting heart rate").pack()
+end_hr_lbl = tk.Label(root, text="Please enter ending heart rate").pack()
 
 end_hr_entry = tk.Entry(
     fg="black",
@@ -101,8 +101,7 @@ def calculate_and_save():
     r_hr = int (r_hr_entry.get())
     end_hr = int(end_hr_entry.get())
 
-    difference = start_hr - end_hr
-
+    difference =  end_hr-start_hr
     hr_list.append(start_hr)
     hr_list.append(r_hr)
     hr_list.append(difference)
