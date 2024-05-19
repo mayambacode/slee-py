@@ -81,6 +81,11 @@ def pickASong(heartRate, restingHR):
         if tempprediction < currentminsong[-1]:
             currentminsong[0] = song
             currentminsong[-1] = tempprediction
-    return currentminsong[0]
+    
+    returnThisFilePath = currentminsong[0].split("\\")
+    returnThisFilePath = returnThisFilePath[-1]
+    print("I should be returning this!")
+    print(returnThisFilePath)
+    return returnThisFilePath
 
-pickASong(100,79)
+# pickASong(100,79)
