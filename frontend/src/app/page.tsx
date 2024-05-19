@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import styles from './page.module.css'; // Include your CSS file for styling
+import "/global.css";
 
 export default function Home() {
   const [step, setStep] = useState(1);
